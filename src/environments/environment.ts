@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // mapbox: {
-  //   accessToken: 'pk.eyJ1IjoiYW55YS15dXUiLCJhIjoiY2t3dW4yb3Y4MXJxZjJubGN2d3U2c2l2cyJ9.QDxYARymbhfH09LEjwe87Q'
+  //   accessToken: 'your token'
   // }
 };
 export const firebaseConfig = {
