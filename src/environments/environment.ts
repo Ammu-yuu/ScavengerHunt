@@ -9,13 +9,13 @@ export const environment = {
   // }
 };
 export const firebaseConfig = {
-  apiKey: "AIzaSyDa1ZZhdWBpZggft6hBF_xHwp_RxESwUps",
-  authDomain: "scavenger-hunt-dcec2.firebaseapp.com",
-  projectId: "scavenger-hunt-dcec2",
-  storageBucket: "scavenger-hunt-dcec2.appspot.com",
-  messagingSenderId: "889682497357",
-  appId: "1:889682497357:web:f7d39d7139bccc4270b104",
-  measurementId: "G-MGWNNXKEWH"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 }
 /*
  * For easier debugging in development mode, you can import the following file
