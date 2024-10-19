@@ -1,0 +1,88 @@
+ion-content.background{
+    // --ion-background-color:#A9B1C7;   
+    --background: url(../../assets/bbbback.png) no-repeat cover fixed center;
+    
+    background: url(../../assets/bbbback.png) no-repeat fixed center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+
+// This will remove iOS Header Line
+ion-toolbar {
+    --border-width: 0 !important;
+    --background: #fcb43c;
+}
+.bgimg{
+    --left: 0 !important;
+    --width: auto !important;
+    --margin:0 !important;
+    --top: 5px;
+    --height: auto !important;
+    --align-items: center !important;
+    --background: transparent !important;
+    --padding: 0 !important;
+    border-color:#e2e2e2;
+    border-style: solid;
+}
+.seperator {
+    hr {
+        position: relative;
+        left: 0;
+        width: 100%;
+        background: #e2e2e2;
+    }
+}
+.review {
+    margin-top: 16px;
+    color: #e2e2e2;
+
+    .rating {
+        display: inline-block;
+        color: #ffffff;
+        background: var(--ion-color-primary);
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .count {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: var(--ion-color-primary);
+    }
+}
+.description {
+    background: #fdc66e3f;
+    padding:5px;
+    font-weight: 400;
+    h4 {
+        color: #e2e2e2;
+        padding-top: 10px;
+    }
+
+    p {
+        color: #e2e2e2;
+        padding-bottom: 10px;
+    }
+}
+.item-name {
+    color: #e2e2e2;
+    text-align: center;
+    height: 30px;
+    padding-bottom: 5px;
+}
+.bg {
+    margin-top: 48px;
+    background: #fcb43c;
+    border-radius: 5px;
+}
+ion-button{
+    --background: #fcb43c;
+}
+ion-footer{
+    --background: #fdc76e !important;
+    --padding: 0px;
+}

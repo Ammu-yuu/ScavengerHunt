@@ -1,0 +1,66 @@
+.backbtn {
+    margin-left: 15px;
+}
+
+.notification {
+    margin-right: 15px;
+}
+ion-content.background{
+    // --ion-background-color:#A9B1C7;   
+    --background: url(../../assets/bbbback.png) no-repeat cover fixed center;
+    
+    background: url(../../assets/bbbback.png) no-repeat fixed center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        --padding-top: 16px;
+        --padding-bottom: 16px;
+        --padding-start: 26px;
+        --padding-end: 26px;
+}
+// This will remove iOS Header Line
+ion-toolbar {
+    --border-width: 0 !important;
+    --background: #fcb43c;
+}
+// ion-content {
+//     --padding-top: 16px;
+//     --padding-bottom: 16px;
+//     --padding-start: 26px;
+//     --padding-end: 26px;
+// }
+
+.title {
+    margin-top: 0;
+    color: #434343;
+}
+
+.profile-info {
+    padding-top: 20px;
+
+    ion-item {
+        --padding-start: 0;
+        //--border-color: #97979713;
+        --background: #8a8e942a;
+
+        ion-label {
+            color: #c6cbd4;;
+            font-size: larger;
+            width: 100%; 
+            --background: #8a8e942a;
+        }
+
+        ion-input {
+            --color: #c6cbd4;;
+            border-radius: 10px !important;
+            padding-right: 30px;
+            padding-left: 30px;
+            border-color: #434343;
+            font-size: 0.9em;
+            //background: #8a8e94d0;
+            //border: 1px solid #f1f1f1 !important;
+            //--background: rgb(219,219,219) !important;
+            max-height: 10vh;
+        }
+    }
+}

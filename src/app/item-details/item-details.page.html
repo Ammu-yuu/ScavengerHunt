@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/tourist-spot-main/{{TouristSpot.Iname}}" routerDirection="back">
+        <img src="../../assets/back-dark.svg" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class=" bgimg">
+    <img src="assets/mimage/{{TouristSpot.mimage}}" />
+</div>
+<h1 class="item-name"> {{TouristSpot.TSname}} </h1>
+<div class="seperator">
+  <hr>
+</div>
+
+<div class="seperator">
+  <hr>
+</div>
+
+<div class="description">
+  <h4>Description</h4>
+
+  <p>
+    {{TouristSpot.description}}
+  </p>
+
+</div>
+
+<div class="seperator">
+  <hr>
+</div>
+</ion-content>
+<ion-footer>
+  <!-- <ion-row>
+    <ion-col size="6">
+      <ion-button expand="full" style="background-color: #fcb43c;">Favorite</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button expand="full" style="background-color: #fcb43c;">Add to Schedule</ion-button>
+    </ion-col>
+  </ion-row> -->
+  <ion-button expand="full" style="background-color: #fcb43c;">Add to Schedule</ion-button>
+</ion-footer>

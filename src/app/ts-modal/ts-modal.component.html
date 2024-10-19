@@ -1,0 +1,58 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="backbtn" (click)="dismissModal()">
+        Close
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="background">
+
+  <div class="ion-padding-vertical bgimg">
+      <img src="assets/mimage/{{TouristSpot.mimage}}" />
+  </div>
+  <h1 class="item-name"> {{TouristSpot.TSname}} </h1>
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <!-- <div class="review">
+    <ion-row>
+      <ion-col size="6">
+        <div class="rating">
+          4.5
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="count">49 Reviews</div>
+      </ion-col>
+    </ion-row>
+  </div> -->
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="description">
+    <h4>Description</h4>
+
+    <p>
+      {{TouristSpot.description}}
+    </p>
+
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+
+
+  <div class="seperator">
+    <hr>
+  </div>
+  <ion-button class="bg" (click)="dismissModal()" expand="block" color="scavenge"  >CLOSE</ion-button>
+
+</ion-content>

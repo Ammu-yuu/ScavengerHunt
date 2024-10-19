@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar translucent>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" (click)="sendback()" >
+        <img src="../../assets/back.svg" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="background">
+  <div class="ion-text-center" style="margin:auto; width:80%;">
+    <br/><br/>
+  <h4 style="color: #c6cbd4">Choose your interests to help us recommend places you might like.</h4>
+  </div>
+  <div class="ion-padding container">
+<ion-card class="ion-padding background form-container">
+  <ion-grid>
+    <ion-row class="ion-text-center" justify-content-start>
+      <ion-col size="4" class="buttons" *ngFor='let x of tourInterests; let i = index' >
+        <ion-buttons>
+          <ion-button [ngClass]="{'selected' : x.selection, 'notselected': !x.selection}" (click)="val(x.Name, i)" >
+              <ion-icon src="assets/icon/{{x.icon}}" style="zoom:6.0;" > </ion-icon>
+            </ion-button>
+            </ion-buttons>
+            <p> {{x.Name}} </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+    <p>{{ids}}</p>
+<!--     
+    <ion-item> [ngClass]="{'green' : selection, 'red': !selection}"
+       <ion-buttons>
+          <span ><ion-button><ion-icon name="person"></ion-icon></ion-button>
+          <ion-label>Top</ion-label></span>
+          <span><ion-button><ion-icon name="person"></ion-icon></ion-button>
+          <ion-label>Beaches</ion-label></span>
+          <span ><ion-button><ion-icon name="person"></ion-icon></ion-button>
+          <ion-label>Culture</ion-label></span>
+        </ion-buttons>
+      </ion-item> -->
+
+    <ion-button color="scavenge"  expand="block" class="main-button bg" (click)="sendids()">Next</ion-button>
+  </div>
+</ion-content>

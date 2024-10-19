@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/discover" routerDirection="back">
+        <img src="../../assets/back.svg" />
+      </ion-button>
+      </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="ion-text-center" style="margin:auto; width:80%; color:#c6cbd4">
+    <br/>
+  <h4>Things to do.</h4>
+  <br/>
+  </div>
+  <ion-card class="card-background-page" *ngFor='let x of TouristSpot | async'>
+    <!-- <strong *ngIf="modelData">{{modelData}}</strong> -->
+    <img src="assets/mimage/{{x.mimage}}" routerLink="/item-details/{{x.id}}" routerDirection="forward"/>
+    <div class="card-title" routerLink="/item-details/{{x.id}}" routerDirection="forward">{{x.TSname}}</div>
+  </ion-card>
+</ion-content>

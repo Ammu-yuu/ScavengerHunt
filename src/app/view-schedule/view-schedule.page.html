@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-button
+        class="backbtn"
+        routerLink="/touristspot"
+        routerDirection="back"
+      >
+        <img src="../../assets/back.svg" />
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title>Your Schedule</ion-title> 
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="background">
+  <br />
+
+  <div class="category-slider ion-padding-start" >
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let x of DaysInfo; let i = index;">
+        <ion-col (click)="changeDay(i); display(x.Date, x.id, i+1);">
+          <h1>Day {{i + 1}}</h1>
+          <img [src] = "x.Selected==true? DaySelect : DayUSelect" />
+          <!-- <img [src] = "DaySelect" /> -->
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <!-- <div  *ngFor="let x of DaysInfo; let i = index;" > -->
+  <div class="time"> {{Date}}  </div>
+  <ion-card class="card-background-page" *ngFor="let x of TouristSpot; let i = index;">
+     <img class="backimage" src="assets\mimage\{{x.mimage}}" style="width: 100%; height:50%;"/>
+     <!-- <div class="time">  14 : 90 PM  </div> -->
+       <div class="card-title"> <p style="color: rgb(255, 249, 249); font-weight: 600; font-size: 1.25em;"> {{x.TSname}}</p>  </div>
+         <div class="button"> <ion-buttons>
+          <ion-button style="background-color: #ece8df61; border-color:#c9913050; border-style: solid; font-weight: 1500;">Move</ion-button> 
+          <ion-button style="background-color: #ece8df61; border-color:#c9913050; border-style: solid;" (click)="delete(i+1)">Delete</ion-button>
+         </ion-buttons> </div>
+      
+      <div class="reward"> 
+        <ion-icon src="assets/icon/lp.svg" style="zoom:1.75; top: -2px; position:relative; float:left; padding:2px; border-color: rgb(234, 233, 238); border-style: solid; border-radius: 50px; background: beige;"> </ion-icon> 
+      <p style="font-weight: 400; font-size: 1.50em; padding:0px; top: -16px; position:absolute; left: 100px;  color: #f6f9ffc9;"> Earn 100 Loyal Points</p>
+      </div> 
+  </ion-card> ​
+  <!-- </div> -->
+</ion-content>

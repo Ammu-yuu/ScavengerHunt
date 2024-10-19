@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/interest" routerDirection="back">
+        <img src="../../assets/back.svg" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="background">
+  <div class="ion-text-center" style="margin:auto; width:80%; color:#c6cbd4">
+    <br/>
+  <h4>Choose places you would love to add in your schedule.</h4> 
+  </div>
+  <ion-card class="card-background-page" *ngFor='let x of TouristSpots; let i=index'>
+    <strong *ngIf="modelData">{{modelData}}</strong>
+    <div class="card-button"> <ion-checkbox color="dark" (click)="SaveTour(x.id,i)" [(ngModel)]="x.isSpotChecked">
+    </ion-checkbox> </div>
+    <img src="assets/mimage/{{x.mimage}}" />
+    <div class="card-title"  (click)="openModal(x)">{{x.TSname}}</div>
+  </ion-card>
+  <ion-button color="scavenge"  expand="block" class="bg" (click)="sendids()">Next</ion-button>
+</ion-content>

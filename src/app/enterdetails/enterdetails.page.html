@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Enter Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="form-container">
+    <ion-item>
+      <ion-label position="floating">Starting date</ion-label>
+      <ion-input style="color: #fff;" placeholer="Starting Date"
+        required
+        type="Date"
+        [(ngModel)]="SDate"
+        name="SDate" 
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ending date</ion-label>
+      <ion-input style="color: #fff;"
+        required
+        type="Date"
+        [(ngModel)]="EDate"
+        name="EDate"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Number of people</ion-label>
+      <ion-input
+        required
+        type="Number"
+        [(ngModel)]="people"
+        name="people"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Budget</ion-label>
+      <ion-input
+        required
+        type="Number"
+        [(ngModel)]="budget"
+        name="budget"
+      ></ion-input>
+    </ion-item>
+
+    <ion-toolbar color="translucent">
+      <ion-button
+        expand="block"
+        class="main-button"
+        (click)="addDetails()"
+        >Next</ion-button
+      >
+    </ion-toolbar>
+  </div>
+</ion-content>

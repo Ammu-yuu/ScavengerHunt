@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <img src="../../assets/menu_bar.svg" />
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content class="background">
+
+  <div class="title ion-padding">
+    <h2>Schedule</h2>
+    <p>See all</p>
+  </div>
+
+  <ion-card class="card-background-page" *ngFor='let x of schedule; let i = index'>  
+    <div class="reward" *ngIf = "x.exist==true" (click)="create(i)"> 
+      <ion-icon src="assets/icon/ongoing.svg" style="zoom:2.2; top: -5px; float:left; padding:2px; border-color: rgb(234, 233, 238); border-style: solid; border-radius: 30px; background: beige;  "> </ion-icon> 
+    <p style="font-weight: 400; font-size: 1.50em; padding:0px; top: -13px; position:absolute; left: 100px;">My Schedule</p>
+    </div> 
+    <!-- <div class="reward"> 
+      <ion-icon src="assets/icon/done.svg" style="zoom:2.2;  bottom: 5px; float:left; padding:2px; border-color: rgb(234, 233, 238); border-style: solid; border-radius: 30px; background: beige;"> </ion-icon> 
+    <p style="font-weight: 400; font-size: 1.50em; padding:0px; top: -13px; position:absolute; left: 100px; ">My Schedule</p>
+    </div>  -->
+    <div class="reward" *ngIf = "x.exist==false" (click)="create(i)"> 
+    <p style="font-weight: 400; font-size: 1.50em; padding:0px; top: -13px; position:absolute; left: 80px; ">Create Schedule</p>
+    </div> 
+  </ion-card>
+  <ion-card class="card-background-page">
+    <div class="reward" *ngIf = "notexist==false" (click)="createschedule()"> 
+      <p style="font-weight: 400; font-size: 1.50em; padding:0px; top: -13px; position:absolute; left: 80px; ">Create Schedule</p>
+      </div> 
+  </ion-card>
+  
+<!-- 
+  <div class="title ion-padding">
+    <h2 class="font-bold">Loyalty Points</h2>
+    <p>See all</p>
+  </div> -->
+
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+        <img src='../../assets/back-dark.svg' />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <h1 class="title" style="color:#c6cbd4;">Profile</h1>
+
+  <div class="container">
+    <div class="overylay">
+     <ion-avatar>
+       <ion-img [src]="profileImageUrl"></ion-img>
+     </ion-avatar>
+    </div>
+   </div>
+
+   <ion-card>
+     <ion-card-header>
+       <ion-card-title>
+         {{this.profileName}}
+       </ion-card-title>
+       <ion-card-subtitle>
+        {{this.profileBD}}
+       </ion-card-subtitle>
+     </ion-card-header>
+ 
+     <ion-card-content>
+       <ion-item lines="none">
+         <ion-icon name="mail"></ion-icon>
+         <ion-label>{{this.profileEmail}}</ion-label>
+        </ion-item>
+       </ion-card-content>
+
+
+   </ion-card>
+</ion-content>
